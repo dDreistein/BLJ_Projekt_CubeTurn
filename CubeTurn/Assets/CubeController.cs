@@ -41,6 +41,39 @@ public class CubeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < 9; i++)
+        {
+            up[i].material = uMap[i];
+            down[i].material = dMap[i];
+            front[i].material = fMap[i];
+            back[i].material = bMap[i];
+            left[i].material = lMap[i];
+            right[i].material = rMap[i];
+        }
+    }
+
+    static Material[] DeepCopy(Material[] original)
+    {
+        Material[] copy = new Material[original.Length];
+        int i = 0;
+        foreach (var material in original)
+        {
+            copy[i] = material;
+            i++;
+        }
+        return copy;
+    }
+
+    void U()
+    {
+        uMap = new Material[9] {uMap[6], uMap[3], uMap[0], 
+                                uMap[7], uMap[4], uMap[1],
+                                uMap[8], uMap[5], uMap[2],
+        };
+        Material[] fMapPrev = DeepCopy(fMap);
+        Material[] bMapPrev = DeepCopy(bMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
         
     }
 }

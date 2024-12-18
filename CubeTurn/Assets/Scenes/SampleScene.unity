@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 59237471}
   - component: {fileID: 59237470}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 147749849}
   - component: {fileID: 147749848}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 272889428}
   - component: {fileID: 272889427}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,7 +1582,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -1695,7 +1695,7 @@ GameObject:
   - component: {fileID: 392807517}
   - component: {fileID: 392807516}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1804,7 +1804,7 @@ GameObject:
   - component: {fileID: 397250633}
   - component: {fileID: 397250632}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 429079416}
   - component: {fileID: 429079415}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 547491356}
   - component: {fileID: 547491355}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2362,7 +2362,7 @@ GameObject:
   - component: {fileID: 574562780}
   - component: {fileID: 574562779}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,7 +2503,7 @@ GameObject:
   - component: {fileID: 680646653}
   - component: {fileID: 680646652}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3159,7 +3159,7 @@ GameObject:
   - component: {fileID: 773835581}
   - component: {fileID: 773835580}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3378,7 +3378,7 @@ GameObject:
   - component: {fileID: 794507718}
   - component: {fileID: 794507717}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3536,7 +3536,7 @@ GameObject:
   - component: {fileID: 840918504}
   - component: {fileID: 840918503}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4409,7 +4409,7 @@ GameObject:
   - component: {fileID: 1006482995}
   - component: {fileID: 1006482994}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4628,7 +4628,7 @@ GameObject:
   - component: {fileID: 1029141234}
   - component: {fileID: 1029141233}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5282,7 +5282,7 @@ GameObject:
   - component: {fileID: 1360899303}
   - component: {fileID: 1360899302}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5391,7 +5391,7 @@ GameObject:
   - component: {fileID: 1392071522}
   - component: {fileID: 1392071521}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5500,7 +5500,7 @@ GameObject:
   - component: {fileID: 1393934464}
   - component: {fileID: 1393934463}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5718,7 +5718,7 @@ GameObject:
   - component: {fileID: 1469158229}
   - component: {fileID: 1469158228}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5827,7 +5827,7 @@ GameObject:
   - component: {fileID: 1483553823}
   - component: {fileID: 1483553822}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6921,7 +6921,7 @@ GameObject:
   - component: {fileID: 1714687834}
   - component: {fileID: 1714687833}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7096,6 +7096,66 @@ MonoBehaviour:
   yellow: {fileID: 0}
   orange: {fileID: 0}
   white: {fileID: 0}
+  uMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   down: []
   up: []
   right: []
@@ -7120,6 +7180,66 @@ MonoBehaviour:
   yellow: {fileID: 2100000, guid: c9318cfebb1d7ad46ac393165e645c83, type: 2}
   orange: {fileID: 2100000, guid: 9d447b2b862147e4482c8b7209c48eee, type: 2}
   white: {fileID: 2100000, guid: 2f49b18ff03e03c419bbf410b5f7e533, type: 2}
+  uMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rMap:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   down:
   - {fileID: 1851602147}
   - {fileID: 718315653}
@@ -7151,17 +7271,35 @@ MonoBehaviour:
   - {fileID: 850041538}
   - {fileID: 257313354}
   left:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  front: []
-  back: []
+  - {fileID: 2042713649}
+  - {fileID: 680646653}
+  - {fileID: 1483553823}
+  - {fileID: 1469158229}
+  - {fileID: 840918504}
+  - {fileID: 547491356}
+  - {fileID: 1029141234}
+  - {fileID: 1392071522}
+  - {fileID: 272889428}
+  front:
+  - {fileID: 59237471}
+  - {fileID: 574562780}
+  - {fileID: 773835581}
+  - {fileID: 429079416}
+  - {fileID: 1891750105}
+  - {fileID: 147749849}
+  - {fileID: 2108227504}
+  - {fileID: 1866488028}
+  - {fileID: 1393934464}
+  back:
+  - {fileID: 1360899303}
+  - {fileID: 1006482995}
+  - {fileID: 794507718}
+  - {fileID: 1951094806}
+  - {fileID: 2064658304}
+  - {fileID: 2092518593}
+  - {fileID: 397250633}
+  - {fileID: 392807517}
+  - {fileID: 1714687834}
 --- !u!95 &1737733197
 Animator:
   serializedVersion: 7
@@ -7526,7 +7664,7 @@ GameObject:
   - component: {fileID: 1866488028}
   - component: {fileID: 1866488027}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7744,7 +7882,7 @@ GameObject:
   - component: {fileID: 1891750105}
   - component: {fileID: 1891750104}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8183,7 +8321,7 @@ GameObject:
   - component: {fileID: 1951094806}
   - component: {fileID: 1951094805}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8619,7 +8757,7 @@ GameObject:
   - component: {fileID: 2042713649}
   - component: {fileID: 2042713648}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Left1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8728,7 +8866,7 @@ GameObject:
   - component: {fileID: 2064658304}
   - component: {fileID: 2064658303}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9165,7 +9303,7 @@ GameObject:
   - component: {fileID: 2092518593}
   - component: {fileID: 2092518592}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Back6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9274,7 +9412,7 @@ GameObject:
   - component: {fileID: 2108227504}
   - component: {fileID: 2108227503}
   m_Layer: 0
-  m_Name: Front
+  m_Name: Front7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
