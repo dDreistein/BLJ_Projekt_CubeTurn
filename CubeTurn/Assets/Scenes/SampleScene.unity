@@ -2458,38 +2458,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574562777}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &608740406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 608740407}
-  m_Layer: 0
-  m_Name: CubeHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &608740407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608740406}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9057603, y: -6.2498093, z: 4.01573}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1737733194}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680646650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2689,7 @@ GameObject:
   - component: {fileID: 718315653}
   - component: {fileID: 718315652}
   m_Layer: 0
-  m_Name: Down2
+  m_Name: Down8
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4846,7 +4814,7 @@ GameObject:
   - component: {fileID: 1043316454}
   - component: {fileID: 1043316453}
   m_Layer: 0
-  m_Name: Down9
+  m_Name: Down3
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5936,7 +5904,7 @@ GameObject:
   - component: {fileID: 1513982082}
   - component: {fileID: 1513982081}
   m_Layer: 0
-  m_Name: Down7
+  m_Name: Down1
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6154,7 +6122,7 @@ GameObject:
   - component: {fileID: 1581104542}
   - component: {fileID: 1581104541}
   m_Layer: 0
-  m_Name: Down3
+  m_Name: Down9
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7045,7 +7013,7 @@ Transform:
   m_GameObject: {fileID: 1737733193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.9057603, y: 6.2498093, z: -4.01573}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7076,7 +7044,7 @@ Transform:
   - {fileID: 1667687765}
   - {fileID: 973260092}
   - {fileID: 1915318974}
-  m_Father: {fileID: 608740407}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1737733195
 MonoBehaviour:
@@ -7096,66 +7064,6 @@ MonoBehaviour:
   yellow: {fileID: 0}
   orange: {fileID: 0}
   white: {fileID: 0}
-  uMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  dMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  bMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   down: []
   up: []
   right: []
@@ -7180,66 +7088,6 @@ MonoBehaviour:
   yellow: {fileID: 2100000, guid: c9318cfebb1d7ad46ac393165e645c83, type: 2}
   orange: {fileID: 2100000, guid: 9d447b2b862147e4482c8b7209c48eee, type: 2}
   white: {fileID: 2100000, guid: 2f49b18ff03e03c419bbf410b5f7e533, type: 2}
-  uMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  dMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  bMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rMap:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   down:
   - {fileID: 1851602147}
   - {fileID: 718315653}
@@ -7259,7 +7107,7 @@ MonoBehaviour:
   - {fileID: 1858277986}
   - {fileID: 1331813025}
   - {fileID: 1995189996}
-  - {fileID: 1995189996}
+  - {fileID: 748427227}
   right:
   - {fileID: 1923404926}
   - {fileID: 1610565731}
@@ -7446,7 +7294,7 @@ GameObject:
   - component: {fileID: 1851602147}
   - component: {fileID: 1851602146}
   m_Layer: 0
-  m_Name: Down1
+  m_Name: Down7
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8648,7 +8496,7 @@ GameObject:
   - component: {fileID: 2004330625}
   - component: {fileID: 2004330624}
   m_Layer: 0
-  m_Name: Down8
+  m_Name: Down2
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9626,4 +9474,4 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 608740407}
+  - {fileID: 1737733194}
