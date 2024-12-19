@@ -171,7 +171,7 @@ public class CubeController : MonoBehaviour
             }
             else if (rightDown.IsPressed())
             {
-
+                F();
             }
         }
         else if (r2.WasPressedThisFrame())
@@ -182,7 +182,7 @@ public class CubeController : MonoBehaviour
             }
             else if (rightDown.IsPressed())
             {
-                
+                S();
             }
         }
         else if (r3.WasPressedThisFrame())
@@ -193,7 +193,7 @@ public class CubeController : MonoBehaviour
             }
             else if (rightDown.IsPressed())
             {
-                
+                B();
             }
         }
         else if (l1.WasPressedThisFrame())
@@ -204,7 +204,7 @@ public class CubeController : MonoBehaviour
             }
             else if (leftDown.IsPressed())
             {
-
+                FPrime();
             }
         }
         else if (l2.WasPressedThisFrame())
@@ -215,7 +215,7 @@ public class CubeController : MonoBehaviour
             }
             else if (leftDown.IsPressed())
             {
-                
+                SPrime();
             }
         }
         else if (l3.WasPressedThisFrame())
@@ -226,7 +226,7 @@ public class CubeController : MonoBehaviour
             }
             else if (leftDown.IsPressed())
             {
-                
+                BPrime();
             }
         }
             
@@ -514,7 +514,6 @@ public class CubeController : MonoBehaviour
     void U()
     {
         Material[] uMapPrev = DeepCopy(uMap);
-        Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -548,7 +547,6 @@ public class CubeController : MonoBehaviour
         
         
         Material[] uMapPrev = DeepCopy(uMap);
-        Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -580,8 +578,6 @@ public class CubeController : MonoBehaviour
 
     void E()
     {
-        Material[] uMapPrev = DeepCopy(uMap);
-        Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -606,8 +602,6 @@ public class CubeController : MonoBehaviour
 
     void EPrime()
     {
-        Material[] uMapPrev = DeepCopy(uMap);
-        Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -632,7 +626,6 @@ public class CubeController : MonoBehaviour
 
     void D()
     {
-        Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -665,7 +658,6 @@ public class CubeController : MonoBehaviour
 
     void DPrime()
     {
-        Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -694,5 +686,181 @@ public class CubeController : MonoBehaviour
         lMap[6] = fMapPrev[6];
         lMap[7] = fMapPrev[7];
         lMap[8] = fMapPrev[8];
+    }
+
+    void F()
+    {
+        Material[] uMapPrev = DeepCopy(uMap);
+        Material[] dMapPrev = DeepCopy(dMap);
+        Material[] fMapPrev = DeepCopy(fMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
+
+        fMap = new[]
+        {
+            fMapPrev[6], fMapPrev[3], fMapPrev[0],
+            fMapPrev[7], fMapPrev[4], fMapPrev[1],
+            fMapPrev[8], fMapPrev[5], fMapPrev[2]
+        };
+
+        uMap[6] = lMapPrev[8];
+        uMap[7] = lMapPrev[5];
+        uMap[8] = lMapPrev[2];
+        
+        lMap[2] = dMapPrev[0];
+        lMap[5] = dMapPrev[1];
+        lMap[8] = dMapPrev[2];
+
+        dMap[0] = rMapPrev[6];
+        dMap[1] = rMapPrev[3];
+        dMap[2] = rMapPrev[0];
+        
+        rMap[0] = uMapPrev[6];
+        rMap[3] = uMapPrev[7];
+        rMap[6] = uMapPrev[8];
+    }
+
+    void FPrime()
+    {
+        Material[] uMapPrev = DeepCopy(uMap);
+        Material[] dMapPrev = DeepCopy(dMap);
+        Material[] fMapPrev = DeepCopy(fMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
+
+        fMap = new[]
+        {
+            fMapPrev[2], fMapPrev[5], fMapPrev[8],
+            fMapPrev[1], fMapPrev[4], fMapPrev[7],
+            fMapPrev[0], fMapPrev[3], fMapPrev[6],
+        };
+        
+        uMap[6] = rMapPrev[0];
+        uMap[7] = rMapPrev[3];
+        uMap[8] = rMapPrev[6];
+        
+        rMap[0] = dMapPrev[2];
+        rMap[3] = dMapPrev[1];
+        rMap[6] = dMapPrev[0];
+        
+        dMap[2] = lMapPrev[8];
+        dMap[1] = lMapPrev[5];
+        dMap[0] = lMapPrev[2];
+        
+        lMap[8] = uMapPrev[6];
+        lMap[5] = uMapPrev[7];
+        lMap[2] = uMapPrev[8];
+    }
+
+    void S()
+    {
+        Material[] uMapPrev = DeepCopy(uMap);
+        Material[] dMapPrev = DeepCopy(dMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
+
+        uMap[3] = lMapPrev[7];
+        uMap[4] = lMapPrev[4];
+        uMap[5] = lMapPrev[1];
+        
+        lMap[1] = dMapPrev[3];
+        lMap[4] = dMapPrev[4];
+        lMap[7] = dMapPrev[5];
+        
+        dMap[3] = rMapPrev[7];
+        dMap[4] = rMapPrev[4];
+        dMap[5] = rMapPrev[1];
+        
+        rMap[1] = uMapPrev[3];
+        rMap[4] = uMapPrev[4]; //GHG
+        rMap[7] = uMapPrev[5];
+    }
+
+    void SPrime()
+    {
+        Material[] uMapPrev = DeepCopy(uMap);
+        Material[] dMapPrev = DeepCopy(dMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
+        
+        uMap[3] = rMapPrev[1];
+        uMap[4] = rMapPrev[4];
+        uMap[5] = rMapPrev[7];
+        
+        rMap[7] = dMapPrev[3];
+        rMap[4] = dMapPrev[4];
+        rMap[1] = dMapPrev[5];
+        
+        dMap[3] = lMapPrev[1];
+        dMap[4] = lMapPrev[4];
+        dMap[5] = lMapPrev[7];
+        
+        lMap[7] = uMapPrev[3];
+        lMap[4] = uMapPrev[4];
+        lMap[1] = uMapPrev[5];
+    }
+
+    void B()
+    {
+        Material[] uMapPrev = DeepCopy(uMap);
+        Material[] dMapPrev = DeepCopy(dMap);
+        Material[] bMapPrev = DeepCopy(bMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
+        
+        bMap = new[]
+        {
+            bMapPrev[6], bMapPrev[3], bMapPrev[0],
+            bMapPrev[7], bMapPrev[4], bMapPrev[1],
+            bMapPrev[8], bMapPrev[5], bMapPrev[2],
+        };
+        
+        dMap[6] = lMapPrev[0];
+        dMap[7] = lMapPrev[3];
+        dMap[8] = lMapPrev[6];
+        
+        lMap[0] = uMapPrev[2];
+        lMap[3] = uMapPrev[1];
+        lMap[6] = uMapPrev[0];
+
+        uMap[0] = rMapPrev[2];
+        uMap[1] = rMapPrev[5];
+        uMap[2] = rMapPrev[8];
+        
+        rMap[2] = dMapPrev[8];
+        rMap[5] = dMapPrev[7];
+        rMap[8] = dMapPrev[6];
+    }
+
+    void BPrime()
+    {
+        Material[] uMapPrev = DeepCopy(uMap);
+        Material[] dMapPrev = DeepCopy(dMap);
+        Material[] bMapPrev = DeepCopy(bMap);
+        Material[] lMapPrev = DeepCopy(lMap);
+        Material[] rMapPrev = DeepCopy(rMap);
+        
+        bMap = new[]
+        {
+            bMapPrev[2], bMapPrev[5], bMapPrev[8],
+            bMapPrev[1], bMapPrev[4], bMapPrev[7],
+            bMapPrev[0], bMapPrev[3], bMapPrev[6],
+        };
+        
+        uMap[0] = lMapPrev[6];
+        uMap[1] = lMapPrev[3];
+        uMap[2] = lMapPrev[0];
+        
+        lMap[0] = dMapPrev[6];
+        lMap[3] = dMapPrev[7];
+        lMap[6] = dMapPrev[8];
+        
+        dMap[6] = rMapPrev[8];
+        dMap[7] = rMapPrev[5];
+        dMap[8] = rMapPrev[2];
+        
+        rMap[2] = uMapPrev[0];
+        rMap[5] = uMapPrev[1];
+        rMap[8] = uMapPrev[2];
     }
 }
