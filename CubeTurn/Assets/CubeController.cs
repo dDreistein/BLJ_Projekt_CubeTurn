@@ -1,7 +1,9 @@
 using System.IO.Compression;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Random = Unity.Mathematics.Random;
 
 public class CubeController : MonoBehaviour
 {
@@ -139,6 +141,7 @@ public class CubeController : MonoBehaviour
             rMap[i] = red;
         }
         
+        Scramble();
     }
 
     void Update()
@@ -280,6 +283,81 @@ public class CubeController : MonoBehaviour
             }
         }
         return copiedArray;
+    }
+
+    void Scramble()
+    {
+        int moves = RandomNumber(25, 50);
+        int[] scramble = new int[moves];
+        scramble[0] = RandomNumber(1, 18);
+        int i = 1;
+        while (i < moves)
+        {
+            int move = RandomNumber(1, 12);
+            while (true)
+            {
+                if (move == scramble[i-1] && move == scramble[i-2])
+                {
+                    move = RandomNumber(1, 12);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
+            scramble[i] = move;
+            
+            i++;
+        }
+
+        foreach (var move in scramble)
+        {
+            switch (move)
+            {
+                case 1:
+                    U();
+                    break;
+                case 2:
+                    UPrime();
+                    break;
+                case 3:
+                    D();
+                    break;
+                case 4:
+                    DPrime();
+                    break;
+                case 5:
+                    R();
+                    break;
+                case 6:
+                    RPrime();
+                    break;
+                case 7:
+                    L();
+                    break;
+                case 8:
+                    LPrime();
+                    break;
+                case 9:
+                    F();
+                    break;
+                case 10:
+                    FPrime();
+                    break;
+                case 11:
+                    B();
+                    break;
+                case 12:
+                    BPrime();
+                    break;
+            }
+        }
+    }
+
+    int RandomNumber(int min, int max)
+    {
+        return UnityEngine.Random.Range(min, max + 1);
     }
 
     void X()
