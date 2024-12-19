@@ -31,7 +31,7 @@ public class CubeController : MonoBehaviour
     
     InputAction rightUp, rightDown, leftUp, leftDown, r1, r2, r3, l1, l2, l3, x, xPrime, y, yPrime, z ,zPrime, r, rPrime, l, lPrime;
     
-    
+    public Animator animator;
     
     void Start()
     {
@@ -401,6 +401,8 @@ public class CubeController : MonoBehaviour
 
     void X()
     {
+        animator.Play("X");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -443,6 +445,8 @@ public class CubeController : MonoBehaviour
 
     void XPrime()
     {
+        animator.Play("XPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -485,6 +489,8 @@ public class CubeController : MonoBehaviour
 
     void Y()
     {
+        animator.Play("Y");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -517,6 +523,8 @@ public class CubeController : MonoBehaviour
 
     void YPrime()
     {
+        animator.Play("YPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -546,6 +554,8 @@ public class CubeController : MonoBehaviour
 
     void Z()
     {
+        animator.Play("Z");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -598,6 +608,8 @@ public class CubeController : MonoBehaviour
 
     void ZPrime()
     {
+        animator.Play("ZPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);

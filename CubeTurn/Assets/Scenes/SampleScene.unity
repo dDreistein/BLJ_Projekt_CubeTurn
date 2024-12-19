@@ -442,6 +442,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1737733196 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3047060348651437011, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
+  m_PrefabInstance: {fileID: 983766656109912618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &983766656109912618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,6 +459,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f1427dede0f80b2439eab0bd2714aca9, type: 2}
+    - target: {fileID: 3047060348651437011, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047060348651437011, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3102550244899754520, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
       propertyPath: red
       value: 
@@ -522,6 +535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7103676251585183857, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1737733196}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
