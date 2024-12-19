@@ -1,5 +1,6 @@
 using System.IO.Compression;
 using System.Security.Cryptography;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -29,6 +30,8 @@ public class CubeController : MonoBehaviour
     MeshRenderer[] back = new MeshRenderer[9];
     
     InputAction rightUp, rightDown, leftUp, leftDown, r1, r2, r3, l1, l2, l3, x, xPrime, y, yPrime, z ,zPrime, r, rPrime, l, lPrime;
+
+    public GameObject timer;
     
     void Start()
     {
@@ -141,6 +144,9 @@ public class CubeController : MonoBehaviour
             rMap[i] = red;
         }
         
+        timer.GetComponent<Timer>().solved = false;
+        timer.GetComponent<Timer>().started = false;
+        
         Scramble();
     }
 
@@ -175,10 +181,12 @@ public class CubeController : MonoBehaviour
             if (rightUp.IsPressed())
             {
                 U();
+                timer.GetComponent<Timer>().started = true;
             }
             else if (rightDown.IsPressed())
             {
                 F();
+                timer.GetComponent<Timer>().started = true;
             }
         }
         else if (r2.WasPressedThisFrame())
@@ -186,10 +194,12 @@ public class CubeController : MonoBehaviour
             if (rightUp.IsPressed())
             {
                 EPrime();
+                timer.GetComponent<Timer>().started = true;
             }
             else if (rightDown.IsPressed())
             {
                 S();
+                timer.GetComponent<Timer>().started = true;
             }
         }
         else if (r3.WasPressedThisFrame())
@@ -197,10 +207,12 @@ public class CubeController : MonoBehaviour
             if (rightUp.IsPressed())
             {
                 DPrime();
+                timer.GetComponent<Timer>().started = true;
             }
             else if (rightDown.IsPressed())
             {
                 B();
+                timer.GetComponent<Timer>().started = true;
             }
         }
         else if (l1.WasPressedThisFrame())
@@ -208,10 +220,12 @@ public class CubeController : MonoBehaviour
             if (leftUp.IsPressed())
             {
                 UPrime();
+                timer.GetComponent<Timer>().started = true;
             }
             else if (leftDown.IsPressed())
             {
                 FPrime();
+                timer.GetComponent<Timer>().started = true;
             }
         }
         else if (l2.WasPressedThisFrame())
@@ -219,10 +233,12 @@ public class CubeController : MonoBehaviour
             if (leftUp.IsPressed())
             {
                 E();
+                timer.GetComponent<Timer>().started = true;
             }
             else if (leftDown.IsPressed())
             {
                 SPrime();
+                timer.GetComponent<Timer>().started = true;
             }
         }
         else if (l3.WasPressedThisFrame())
@@ -230,29 +246,34 @@ public class CubeController : MonoBehaviour
             if (leftUp.IsPressed())
             {
                 D();
+                timer.GetComponent<Timer>().started = true;
             }
             else if (leftDown.IsPressed())
             {
                 BPrime();
+                timer.GetComponent<Timer>().started = true;
             }
         }
         else if (r.WasPressedThisFrame())
         {
             R();
+            timer.GetComponent<Timer>().started = true;
         }
         else if (rPrime.WasPressedThisFrame())
         {
             RPrime();
+            timer.GetComponent<Timer>().started = true;
         }
         else if (l.WasPressedThisFrame())
         {
             L();
+            timer.GetComponent<Timer>().started = true;
         }
         else if (lPrime.WasPressedThisFrame())
         {
             LPrime();
+            timer.GetComponent<Timer>().started = true;
         }
-            
         int i = 0;
         while (i < 9)
         {
@@ -263,6 +284,11 @@ public class CubeController : MonoBehaviour
             left[i].material = lMap[i];
             right[i].material = rMap[i];
             i++;
+        }
+
+        if (timer.GetComponent<Timer>().started)
+        {
+            timer.GetComponent<Timer>().solved = IsSolved();
         }
     }
 
@@ -353,6 +379,43 @@ public class CubeController : MonoBehaviour
                     break;
             }
         }
+    }
+
+    bool IsSolved()
+    {
+        for (int i = 0; i < uMap.Length-1; i++)
+        {
+            if (uMap[i] != uMap[i + 1])
+            {
+                return false;
+            }
+
+            if (dMap[i] != dMap[i + 1])
+            {
+                return false;
+            }
+
+            if (fMap[i] != fMap[i + 1])
+            {
+                return false;
+            }
+
+            if (bMap[i] != bMap[i + 1])
+            {
+                return false;
+            }
+
+            if (lMap[i] != lMap[i + 1])
+            {
+                return false;
+            }
+
+            if (rMap[i] != rMap[i + 1])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     int RandomNumber(int min, int max)
