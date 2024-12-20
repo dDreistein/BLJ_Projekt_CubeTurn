@@ -210,7 +210,7 @@ public class CubeController : MonoBehaviour
                 }
                 else if (rightDown.IsPressed())
                 {
-                    B();
+                    BPrime();
                     timer.GetComponent<Timer>().StartTimer();
                 }
             }
@@ -249,7 +249,7 @@ public class CubeController : MonoBehaviour
                 }
                 else if (leftDown.IsPressed())
                 {
-                    BPrime();
+                    B();
                     timer.GetComponent<Timer>().StartTimer();
                 }
             }
