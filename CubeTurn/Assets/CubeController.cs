@@ -1,13 +1,6 @@
 using System;
-using System.IO.Compression;
-using System.Security.Cryptography;
-using System.Threading;
-using NUnit.Framework.Constraints;
-using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using Random = Unity.Mathematics.Random;
 
 public class CubeController : MonoBehaviour
 {
