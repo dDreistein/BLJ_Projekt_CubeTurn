@@ -28,8 +28,11 @@ public class Timer : MonoBehaviour
 
     public void StartTimer()
     {
-        currentTime = 0;
-        timerActive = true;
+        if (!timerActive)
+        { 
+            currentTime = 0;
+            timerActive = true;
+        }
     }
 
     public void StopTimer()

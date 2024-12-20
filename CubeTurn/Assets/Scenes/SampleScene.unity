@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216819381
@@ -1331,6 +1331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7103676251585183857, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 216819379}
     - target: {fileID: 7103676251585183857, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
       propertyPath: animator
       value: 

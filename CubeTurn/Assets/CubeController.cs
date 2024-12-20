@@ -1,6 +1,9 @@
+using System;
 using System.IO.Compression;
 using System.Security.Cryptography;
+using System.Threading;
 using NUnit.Framework.Constraints;
+using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -32,6 +35,10 @@ public class CubeController : MonoBehaviour
     InputAction rightUp, rightDown, leftUp, leftDown, r1, r2, r3, l1, l2, l3, x, xPrime, y, yPrime, z ,zPrime, r, rPrime, l, lPrime;
     
     public Animator animator;
+
+    public GameObject timer;
+    
+    public bool solved;
     
     void Start()
     {
@@ -149,122 +156,149 @@ public class CubeController : MonoBehaviour
 
     void Update()
     {
-        if (x.WasPressedThisFrame())
+        if (!solved)
         {
-            X();
-        }
-        else if (xPrime.WasPressedThisFrame())
-        {
-            XPrime();
-        }
-        else if (y.WasPressedThisFrame())
-        {
-            Y();
-        }
-        else if (yPrime.WasPressedThisFrame())
-        {
-            YPrime();
-        }
-        else if (z.WasPressedThisFrame())
-        {
-            Z();
-        }
-        else if (zPrime.WasPressedThisFrame())
-        {
-            ZPrime();
-        }
-        else if (r1.WasPressedThisFrame())
-        {
-            if (rightUp.IsPressed())
+            if (x.WasPressedThisFrame())
             {
-                U();
+                X();
             }
-            else if (rightDown.IsPressed())
+            else if (xPrime.WasPressedThisFrame())
             {
-                F();
+                XPrime();
+            }
+            else if (y.WasPressedThisFrame())
+            {
+                Y();
+            }
+            else if (yPrime.WasPressedThisFrame())
+            {
+                YPrime();
+            }
+            else if (z.WasPressedThisFrame())
+            {
+                Z();
+            }
+            else if (zPrime.WasPressedThisFrame())
+            {
+                ZPrime();
+            }
+            else if (r1.WasPressedThisFrame())
+            {
+                if (rightUp.IsPressed())
+                {
+                    U();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+                else if (rightDown.IsPressed())
+                {
+                    F();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+            }
+            else if (r2.WasPressedThisFrame())
+            {
+                if (rightUp.IsPressed())
+                {
+                    EPrime();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+                else if (rightDown.IsPressed())
+                {
+                    S();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+            }
+            else if (r3.WasPressedThisFrame())
+            {
+                if (rightUp.IsPressed())
+                {
+                    DPrime();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+                else if (rightDown.IsPressed())
+                {
+                    B();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+            }
+            else if (l1.WasPressedThisFrame())
+            {
+                if (leftUp.IsPressed())
+                {
+                    UPrime();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+                else if (leftDown.IsPressed())
+                {
+                    FPrime();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+            }
+            else if (l2.WasPressedThisFrame())
+            {
+                if (leftUp.IsPressed())
+                {
+                    E();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+                else if (leftDown.IsPressed())
+                {
+                    SPrime();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+            }
+            else if (l3.WasPressedThisFrame())
+            {
+                if (leftUp.IsPressed())
+                {
+                    D();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+                else if (leftDown.IsPressed())
+                {
+                    BPrime();
+                    timer.GetComponent<Timer>().StartTimer();
+                }
+            }
+            else if (r.WasPressedThisFrame())
+            {
+                R();
+                timer.GetComponent<Timer>().StartTimer();
+            }
+            else if (rPrime.WasPressedThisFrame())
+            {
+                RPrime();
+                timer.GetComponent<Timer>().StartTimer();
+            }
+            else if (l.WasPressedThisFrame())
+            {
+                L();
+                timer.GetComponent<Timer>().StartTimer();
+            }
+            else if (lPrime.WasPressedThisFrame())
+            {
+                LPrime();
+                timer.GetComponent<Timer>().StartTimer();
+            }
+
+            int i = 0;
+            while (i < 9)
+            {
+                up[i].material = uMap[i];
+                down[i].material = dMap[i];
+                front[i].material = fMap[i];
+                back[i].material = bMap[i];
+                left[i].material = lMap[i];
+                right[i].material = rMap[i];
+                i++;
             }
         }
-        else if (r2.WasPressedThisFrame())
+
+        solved = IsSolved(up, down, front, back, left, right);
+
+        if (solved)
         {
-            if (rightUp.IsPressed())
-            {
-                EPrime();
-            }
-            else if (rightDown.IsPressed())
-            {
-                S();
-            }
-        }
-        else if (r3.WasPressedThisFrame())
-        {
-            if (rightUp.IsPressed())
-            {
-                DPrime();
-            }
-            else if (rightDown.IsPressed())
-            {
-                B();
-            }
-        }
-        else if (l1.WasPressedThisFrame())
-        {
-            if (leftUp.IsPressed())
-            {
-                UPrime();
-            }
-            else if (leftDown.IsPressed())
-            {
-                FPrime();
-            }
-        }
-        else if (l2.WasPressedThisFrame())
-        {
-            if (leftUp.IsPressed())
-            {
-                E();
-            }
-            else if (leftDown.IsPressed())
-            {
-                SPrime();
-            }
-        }
-        else if (l3.WasPressedThisFrame())
-        {
-            if (leftUp.IsPressed())
-            {
-                D();
-            }
-            else if (leftDown.IsPressed())
-            {
-                BPrime();
-            }
-        }
-        else if (r.WasPressedThisFrame())
-        {
-            R();
-        }
-        else if (rPrime.WasPressedThisFrame())
-        {
-            RPrime();
-        }
-        else if (l.WasPressedThisFrame())
-        {
-            L();
-        }
-        else if (lPrime.WasPressedThisFrame())
-        {
-            LPrime();
-        }
-        int i = 0;
-        while (i < 9)
-        {
-            up[i].material = uMap[i];
-            down[i].material = dMap[i];
-            front[i].material = fMap[i];
-            back[i].material = bMap[i];
-            left[i].material = lMap[i];
-            right[i].material = rMap[i];
-            i++;
+            timer.GetComponent<Timer>().StopTimer();
         }
     }
 
@@ -292,7 +326,8 @@ public class CubeController : MonoBehaviour
         int moves = RandomNumber(25, 50);
         int[] scramble = new int[moves];
         scramble[0] = RandomNumber(1, 18);
-        int i = 1;
+        scramble[1] = RandomNumber(1, 18);
+        int i = 2;
         while (i < moves)
         {
             int move = RandomNumber(1, 12);
@@ -312,7 +347,7 @@ public class CubeController : MonoBehaviour
             
             i++;
         }
-
+        
         foreach (var move in scramble)
         {
             switch (move)
@@ -357,40 +392,46 @@ public class CubeController : MonoBehaviour
         }
     }
 
-    bool IsSolved()
+    static bool IsSolved(MeshRenderer[] up, MeshRenderer[] down, MeshRenderer[] front, MeshRenderer[] back, MeshRenderer[] left, MeshRenderer[] right)
     {
-        for (int i = 0; i < uMap.Length-1; i++)
+        for (int i = 0; i < up.Length-1; i++)
         {
-            if (uMap[i] != uMap[i + 1])
+            if (up[i].material.name != up[i+1].material.name)
             {
+                Console.WriteLine("up");
+                return false;
+            }
+            if (down[i].material.name != down[i + 1].material.name)
+            {
+                Console.WriteLine("down");
+                return false;
+            }
+            
+            if (front[i].material.name != front[i + 1].material.name)
+            {
+                Console.WriteLine("front");
                 return false;
             }
 
-            if (dMap[i] != dMap[i + 1])
+            if (back[i].material.name != back[i + 1].material.name)
             {
+                Console.WriteLine("back");
                 return false;
             }
 
-            if (fMap[i] != fMap[i + 1])
+            if (left[i].material.name != left[i + 1].material.name)
             {
+                Console.WriteLine("left");
                 return false;
             }
 
-            if (bMap[i] != bMap[i + 1])
+            if (right[i].material.name != right[i + 1].material.name)
             {
-                return false;
-            }
-
-            if (lMap[i] != lMap[i + 1])
-            {
-                return false;
-            }
-
-            if (rMap[i] != rMap[i + 1])
-            {
+                Console.WriteLine("right");
                 return false;
             }
         }
+        Console.WriteLine("solved");
         return true;
     }
 
