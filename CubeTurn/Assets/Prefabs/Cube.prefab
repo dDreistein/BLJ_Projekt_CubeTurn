@@ -7607,7 +7607,9 @@ MonoBehaviour:
   yellow: {fileID: 2100000, guid: c9318cfebb1d7ad46ac393165e645c83, type: 2}
   orange: {fileID: 2100000, guid: 9d447b2b862147e4482c8b7209c48eee, type: 2}
   white: {fileID: 2100000, guid: 2f49b18ff03e03c419bbf410b5f7e533, type: 2}
-  animator: {fileID: 0}
+  animator: {fileID: 3047060348651437011}
+  timer: {fileID: 0}
+  solved: 0
 --- !u!1 &6596159979493710041
 GameObject:
   m_ObjectHideFlags: 0

@@ -314,7 +314,7 @@ public class CubeController : MonoBehaviour
         return copiedArray;
     }
 
-    void Scramble()
+    public void Scramble()
     {
         int moves = RandomNumber(25, 50);
         int[] scramble = new int[moves];
