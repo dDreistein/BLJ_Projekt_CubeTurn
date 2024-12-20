@@ -5,32 +5,35 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
-    private double timer;
-
-    public GameObject cube;
-    public bool solved = false;
-    public bool started = false;
+    private bool timerActive;
+    private float currentTime;
+    [SerializeField] private TMP_Text text;
     
     void Start()
     {
-        timer = 0;
+        currentTime = 0;
     }
 
     void Update()
     {
-        if (started && !solved)
+        if (timerActive)
         {
-            while (!solved)
-            {
-                timer += Time.deltaTime;
-                
-                int minutes = (int)(timer / 60);
-                int seconds = (int)(timer % 60);
-                int milliseconds = (int)((timer * 1000) % 1000);
-                
-                timerText.text = $"{minutes:D2}:{seconds:D2}:{milliseconds:D3}";
-            }
+            currentTime += Time.deltaTime;
         }
+        
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        
+        text.text = time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00") + ":" + time.Milliseconds.ToString("000");
+    }
+
+    public void StartTimer()
+    {
+        currentTime = 0;
+        timerActive = true;
+    }
+
+    public void StopTimer()
+    {
+        timerActive = false;
     }
 }

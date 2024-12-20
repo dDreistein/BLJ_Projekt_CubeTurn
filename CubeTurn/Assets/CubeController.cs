@@ -662,6 +662,8 @@ public class CubeController : MonoBehaviour
 
     void U()
     {
+        animator.Play("U");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -693,7 +695,7 @@ public class CubeController : MonoBehaviour
 
     void UPrime()
     {
-        
+        animator.Play("UPrime");
         
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -727,6 +729,8 @@ public class CubeController : MonoBehaviour
 
     void E()
     {
+        animator.Play("E");
+        
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -751,6 +755,8 @@ public class CubeController : MonoBehaviour
 
     void EPrime()
     {
+        animator.Play("EPrime");
+        
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -775,6 +781,8 @@ public class CubeController : MonoBehaviour
 
     void D()
     {
+        animator.Play("D");
+        
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -807,6 +815,8 @@ public class CubeController : MonoBehaviour
 
     void DPrime()
     {
+        animator.Play("DPrime");
+        
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -839,6 +849,8 @@ public class CubeController : MonoBehaviour
 
     void F()
     {
+        animator.Play("F");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -871,6 +883,8 @@ public class CubeController : MonoBehaviour
 
     void FPrime()
     {
+        animator.Play("FPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] fMapPrev = DeepCopy(fMap);
@@ -903,6 +917,8 @@ public class CubeController : MonoBehaviour
 
     void S()
     {
+        animator.Play("S");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -927,6 +943,8 @@ public class CubeController : MonoBehaviour
 
     void SPrime()
     {
+        animator.Play("SPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] lMapPrev = DeepCopy(lMap);
@@ -951,6 +969,8 @@ public class CubeController : MonoBehaviour
 
     void B()
     {
+        animator.Play("B");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -983,6 +1003,8 @@ public class CubeController : MonoBehaviour
 
     void BPrime()
     {
+        animator.Play("BPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -1015,6 +1037,8 @@ public class CubeController : MonoBehaviour
 
     void R()
     {
+        animator.Play("R");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -1048,6 +1072,8 @@ public class CubeController : MonoBehaviour
 
     void RPrime()
     {
+        animator.Play("RPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -1081,6 +1107,8 @@ public class CubeController : MonoBehaviour
 
     void L()
     {
+        animator.Play("L");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] bMapPrev = DeepCopy(bMap);
@@ -1114,6 +1142,8 @@ public class CubeController : MonoBehaviour
 
     void LPrime()
     {
+        animator.Play("LPrime");
+        
         Material[] uMapPrev = DeepCopy(uMap);
         Material[] dMapPrev = DeepCopy(dMap);
         Material[] bMapPrev = DeepCopy(bMap);
