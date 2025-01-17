@@ -383,6 +383,7 @@ public class CubeController : MonoBehaviour
                     break;
             }
         }
+        animator.Play("Scramble");
     }
 
     static bool IsSolved(MeshRenderer[] up, MeshRenderer[] down, MeshRenderer[] front, MeshRenderer[] back, MeshRenderer[] left, MeshRenderer[] right)
