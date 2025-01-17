@@ -1,11 +1,11 @@
+using System;
 using UnityEngine;
 using TMPro;
+using UnityEditor;
 using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject inputScore;
-
     [SerializeField] 
     private TMP_InputField inputName;
     
@@ -13,6 +13,8 @@ public class ScoreManager : MonoBehaviour
 
     public void SubmitScore()
     {
-        submitScoreEvent.Invoke(inputName.text, inputScore.GetComponent<Timer>().endTime);
+        Debug.Log(inputName.text);
+        Debug.Log(Timer.EndTime);
+        submitScoreEvent.Invoke(inputName.text, Timer.EndTime);
     }
 }

@@ -7,7 +7,9 @@ public class Timer : MonoBehaviour
 {
     private bool timerActive;
     private float currentTime;
-    public int endTime;
+    
+    public static int EndTime;
+    
     [SerializeField] private TMP_Text text;
     
     void Start()
@@ -31,7 +33,7 @@ public class Timer : MonoBehaviour
     {
         if (!timerActive)
         { 
-            endTime = 0;
+            EndTime = 0;
             currentTime = 0;
             timerActive = true;
         }
@@ -39,7 +41,7 @@ public class Timer : MonoBehaviour
 
     public void StopTimer()
     {
-        endTime = Convert.ToInt32(currentTime * 1000);
+        EndTime = Convert.ToInt32(currentTime * 1000);
         timerActive = false;
     }
 }

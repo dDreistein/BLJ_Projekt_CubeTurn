@@ -12,7 +12,7 @@ public class Leaderboard : MonoBehaviour
     [SerializeField]
     private List<TextMeshProUGUI> scores;
 
-    private string publicLeaderboardKey = "719c651a17d0d2fa752f9b52fd1a2c3e2f2e9306d4bc8559695721ebd2a829e9";
+    private string publicLeaderboardKey = "250bc396d450d63496768f9bc1e0e99f6f94e98f8a20e830c5072a1cf1eb790b";
 
     private void Start()
     {
@@ -41,7 +41,9 @@ public class Leaderboard : MonoBehaviour
             {
                 username = username.Substring(0, 10);
             }
+            Leaderboards.CubeTurn.ResetPlayer();
             GetLeaderboard();
         }));
+        
     }
 }
