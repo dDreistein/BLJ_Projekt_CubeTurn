@@ -14,11 +14,17 @@ public class Leaderboard : MonoBehaviour
 
     private string publicLeaderboardKey = "719c651a17d0d2fa752f9b52fd1a2c3e2f2e9306d4bc8559695721ebd2a829e9";
 
-    public void getLeaderboard()
+    private void Start()
+    {
+        GetLeaderboard();
+    }
+
+    public void GetLeaderboard()
     {
         LeaderboardCreator.GetLeaderboard(publicLeaderboardKey,((msg) =>
         {
-            for (int i = 0; i < names.Count; i++)
+            int loopLength = (msg.Length < names.Count) ? msg.Length : names.Count;
+            for (int i = 0; i < loopLength; i++)
             {
                 names[i].text = msg[i].Username;
                 TimeSpan time = TimeSpan.FromMilliseconds(msg[i].Score);
@@ -31,8 +37,11 @@ public class Leaderboard : MonoBehaviour
     {
         LeaderboardCreator.UploadNewEntry(publicLeaderboardKey, username, score, ((msg) =>
         {
-            username.Substring(0, 10);
-            getLeaderboard();
+            if (username.Length > 10)
+            {
+                username = username.Substring(0, 10);
+            }
+            GetLeaderboard();
         }));
     }
 }
