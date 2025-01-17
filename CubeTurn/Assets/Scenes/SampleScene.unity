@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5655639406953417552, guid: d878a8382a9f1bb42b2b4e56f710c50f, type: 3}
       propertyPath: near clip plane
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844468500463276611, guid: d878a8382a9f1bb42b2b4e56f710c50f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1245,6 +1245,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2073855799056494941, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d3bc3151bc1f8f34f8a1d5fee8bb3a35, type: 2}
     - target: {fileID: 2224972886493050774, guid: b9fccaee83128ee40ad0d9274841be59, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
