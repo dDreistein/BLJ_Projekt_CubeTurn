@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Dan.Main;
+using UnityEngine.SceneManagement;
 
 public class CubeController : MonoBehaviour
 {
@@ -33,8 +34,6 @@ public class CubeController : MonoBehaviour
     public GameObject timer;
 
     public GameObject canvasLeaderboard;
-
-    public GameObject leaderboardInput;
     
     public bool solved;
     
@@ -302,6 +301,11 @@ public class CubeController : MonoBehaviour
         }
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
     static Material[] DeepCopy(Material[] sourceArray)
     {
         if (sourceArray == null) return null;
@@ -320,7 +324,6 @@ public class CubeController : MonoBehaviour
         }
         return copiedArray;
     }
-
     public void Scramble()
     {
         Leaderboards.CubeTurn.ResetPlayer();
@@ -349,6 +352,8 @@ public class CubeController : MonoBehaviour
             
             i++;
         }
+        
+        gameObject.SetActive(true);
         
         foreach (var move in scramble)
         {
@@ -392,9 +397,10 @@ public class CubeController : MonoBehaviour
                     break;
             }
         }
+        
         animator.Play("Scramble");
     }
-
+    
     static bool IsSolved(MeshRenderer[] up, MeshRenderer[] down, MeshRenderer[] front, MeshRenderer[] back, MeshRenderer[] left, MeshRenderer[] right)
     {
         for (int i = 0; i < up.Length-1; i++)

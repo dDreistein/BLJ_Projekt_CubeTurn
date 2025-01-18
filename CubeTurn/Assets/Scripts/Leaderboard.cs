@@ -43,6 +43,5 @@ public class Leaderboard : MonoBehaviour
             }
             GetLeaderboard();
         }));
-        
     }
 }
