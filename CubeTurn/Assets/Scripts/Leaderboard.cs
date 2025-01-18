@@ -41,7 +41,6 @@ public class Leaderboard : MonoBehaviour
             {
                 username = username.Substring(0, 10);
             }
-            Leaderboards.CubeTurn.ResetPlayer();
             GetLeaderboard();
         }));
         

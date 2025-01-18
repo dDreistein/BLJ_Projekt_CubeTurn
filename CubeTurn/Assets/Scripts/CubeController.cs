@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Dan.Main;
 
 public class CubeController : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class CubeController : MonoBehaviour
     public Animator animator;
 
     public GameObject timer;
+
+    public GameObject canvasLeaderboard;
+
+    public GameObject leaderboardInput;
     
     public bool solved;
     
@@ -285,6 +290,7 @@ public class CubeController : MonoBehaviour
                 right[i].material = rMap[i];
                 i++;
             }
+            canvasLeaderboard.SetActive(false);
         }
 
         solved = IsSolved(up, down, front, back, left, right);
@@ -292,6 +298,7 @@ public class CubeController : MonoBehaviour
         if (solved)
         {
             timer.GetComponent<Timer>().StopTimer();
+            canvasLeaderboard.SetActive(true);
         }
     }
 
@@ -316,6 +323,8 @@ public class CubeController : MonoBehaviour
 
     public void Scramble()
     {
+        Leaderboards.CubeTurn.ResetPlayer();
+        
         int moves = RandomNumber(25, 50);
         int[] scramble = new int[moves];
         scramble[0] = RandomNumber(1, 18);
