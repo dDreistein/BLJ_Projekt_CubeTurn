@@ -51,7 +51,6 @@ public class Timer : MonoBehaviour
             EndTime = Convert.ToInt32(currentTime * 1000);
             timerActive = false;
             int fifthTime = 0;
-        
             LeaderboardCreator.GetLeaderboard("250bc396d450d63496768f9bc1e0e99f6f94e98f8a20e830c5072a1cf1eb790b", ((msg) => 
             {
                 if (msg.Length >= 5)
