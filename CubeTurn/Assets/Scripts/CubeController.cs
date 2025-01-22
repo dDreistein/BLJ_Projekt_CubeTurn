@@ -300,7 +300,7 @@ public class CubeController : MonoBehaviour
             canvasLeaderboard.SetActive(true);
         }
     }
-
+    
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -397,7 +397,7 @@ public class CubeController : MonoBehaviour
                     break;
             }
         }
-        
+        animator.enabled = true;
         animator.Play("Scramble");
     }
     

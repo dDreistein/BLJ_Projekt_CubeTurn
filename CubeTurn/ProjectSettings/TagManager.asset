@@ -10,6 +10,7 @@ TagManager:
   - Right
   - Front
   - Back
+  - Cube
   layers:
   - Default
   - TransparentFX
