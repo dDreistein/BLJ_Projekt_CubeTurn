@@ -45,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: PixelCam
+    uniqueID: 3461145609
+    locked: 0
   - name: CamUI
     uniqueID: 3100576619
     locked: 0
